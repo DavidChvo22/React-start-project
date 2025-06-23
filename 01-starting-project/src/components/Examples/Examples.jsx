@@ -1,6 +1,6 @@
-import Button from "./Button";
+import Button from "../Button/Button";
 import { useState } from "react";
-import { EXAMPLES } from "../../shared/data";
+import { EXAMPLES } from "./ExamplesData";
 import "./Examples.css";
 
 export default function Examples() {
