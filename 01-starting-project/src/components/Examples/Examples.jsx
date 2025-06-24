@@ -5,6 +5,7 @@ import "./Examples.css";
 
 export default function Examples() {
   const [selectedTopic, setSelectedTopic] = useState("components");
+  const topics=  ["components","jsx", "props","state"];
 
   function handleClick(selectedButton) {
     setSelectedTopic(selectedButton);
@@ -14,30 +15,12 @@ export default function Examples() {
     <section id="examples">
       <h2>Examples</h2>
       <menu>
-        <Button
-          isSelected={selectedTopic === "components"}
-          onSelect={() => handleClick("components")}
-        >
-          Components
-        </Button>
-        <Button
-          isSelected={selectedTopic === "jsx"}
-          onSelect={() => handleClick("jsx")}
-        >
-          JSX
-        </Button>
-        <Button
-          isSelected={selectedTopic === "props"}
-          onSelect={() => handleClick("props")}
-        >
-          Props
-        </Button>
-        <Button
-          isSelected={selectedTopic === "state"}
-          onSelect={() => handleClick("state")}
-        >
-          State
-        </Button>
+        {topics.map(topic =>(<Button
+          key={topic}
+          isSelected={selectedTopic === topic}
+          onSelect={()=>handleClick(topic)}>
+            {topic.charAt(0).toUpperCase() + topic.slice(1)}
+        </Button>))}
       </menu>
 
       <div id="tab-content">

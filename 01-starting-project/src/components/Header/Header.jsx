@@ -4,11 +4,11 @@ import "./Header.css";
 const reactDescriptions = ["Fundamental", "Crucial", "Core"];
 
 function genRandomInt(max) {
-  return Math.floor(Math.random() * (max + 1));
+  return Math.floor(Math.random() * (max));
 }
 
 export default function Header() {
-  const description = reactDescriptions[genRandomInt(3)];
+  const description = reactDescriptions[genRandomInt(reactDescriptions.length)];
 
   return (
     <header>
