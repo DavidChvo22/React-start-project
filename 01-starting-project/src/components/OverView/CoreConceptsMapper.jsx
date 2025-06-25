@@ -1,6 +1,6 @@
 import { CORE_CONCEPTS } from "./CoreConceptsData.js";
 import "./CoreConcepts.css";
-import CoreConcept from "../CoreConcepts/CoreConcepts.jsx";
+import CoreConcepts from "../CoreConcepts/CoreConcepts.jsx";
 
 export default function CoreConceptsSegment() {
   return (
@@ -9,7 +9,7 @@ export default function CoreConceptsSegment() {
       <ul>
         {CORE_CONCEPTS.map((conceptItem) => (
           <li key={conceptItem.title}>
-            <CoreConcept {...conceptItem} />
+            <CoreConcepts {...conceptItem} />
           </li>
         ))}
       </ul>
